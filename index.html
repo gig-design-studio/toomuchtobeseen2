@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNVEIL®</title>
+    <meta name="description" content="UNVEIL® is a creative studio using technology to expand human creativity">
+    <link rel="stylesheet" href="styles.css">
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-item active">TOO MUCH TO BE SEEN</a>
+            <a href="work.html" class="nav-item">WORK</a>
+            <a href="#studio" class="nav-item">STUDIO</a>
+            <a href="#contact" class="nav-item">CONTACT</a>
+        </nav>
+    </header>
+
+    <!-- Slider Container -->
+    <div class="slider">
+        <p class="slide-title">Blurred Vision</p>
+    </div>
+
+    <!-- Thumbnail Wheel -->
+    <div class="thumbnail-wheel"></div>
+
+    <!-- Bottom Navigation -->
+    <footer class="bottom-nav">
+        <button class="nav-btn active">OVERVIEW</button>
+        <button class="nav-btn">INDEX</button>
+    </footer>
+
+    <!-- Fullpage Modal -->
+    <div class="fullpage-modal" id="fullpageModal">
+        <button class="close-btn" id="closeModal">✕</button>
+        <div id="modalContent"></div>
+        <div class="modal-overlay">
+            <div class="modal-title-section">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <p class="modal-subtitle" id="modalSubtitle"></p>
+            </div>
+            <button class="modal-toggle-btn" id="modalToggleBtn">MORE</button>
+            <div class="modal-description" id="modalDescription"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

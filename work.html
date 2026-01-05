@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORK - TOO MUCH TO BE SEEN</title>
+    <meta name="description" content="Portfolio of TOO MUCH TO BE SEEN">
+    <link rel="stylesheet" href="work-styles.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-item">TOO MUCH TO BE SEEN</a>
+            <a href="work.html" class="nav-item active">WORK</a>
+            <a href="#studio" class="nav-item">STUDIO</a>
+            <a href="#contact" class="nav-item">CONTACT</a>
+        </nav>
+    </header>
+
+    <!-- Portfolio Grid -->
+    <div class="portfolio-container">
+        <!-- Category Toggle -->
+        <div class="category-toggle">
+            <button class="toggle-btn active" data-category="movie">MOVIE</button>
+            <button class="toggle-btn" data-category="still">STILL</button>
+            <div class="toggle-slider"></div>
+        </div>
+
+        <!-- MOVIE Category -->
+        <div class="portfolio-grid movie-grid active" id="movie-grid">
+            <div class="portfolio-item" data-video="cg-yzavoku-slider/movie/twice_-_strategy_(feat._megan_thee_stallion) (360p).mp4">
+                <video muted loop playsinline>
+                    <source src="cg-yzavoku-slider/movie/twice_-_strategy_(feat._megan_thee_stallion) (360p).mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="portfolio-item" data-video="cg-yzavoku-slider/movie/woodz_-_smashing_concrete (360p).mp4">
+                <video muted loop playsinline>
+                    <source src="cg-yzavoku-slider/movie/woodz_-_smashing_concrete (360p).mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="portfolio-item" data-video="cg-yzavoku-slider/movie/woodz_-_i'll_never_love_again (360p).mp4">
+                <video muted loop playsinline>
+                    <source src="cg-yzavoku-slider/movie/woodz_-_i'll_never_love_again (360p).mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="portfolio-item" data-video="cg-yzavoku-slider/movie/aespa_-_hot_mess (360p).mp4">
+                <video muted loop playsinline>
+                    <source src="cg-yzavoku-slider/movie/aespa_-_hot_mess (360p).mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="portfolio-item" data-video="cg-yzavoku-slider/movie/taeyong_-_501 (360p).mp4">
+                <video muted loop playsinline>
+                    <source src="cg-yzavoku-slider/movie/taeyong_-_501 (360p).mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="portfolio-item" data-video="cg-yzavoku-slider/movie/big_naughty_x_kid_milli_-_freestylin (360p).mp4">
+                <video muted loop playsinline>
+                    <source src="cg-yzavoku-slider/movie/big_naughty_x_kid_milli_-_freestylin (360p).mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="portfolio-item" data-video="cg-yzavoku-slider/movie/surl_-_forest_(mountain_and_elevator) (360p).mp4">
+                <video muted loop playsinline>
+                    <source src="cg-yzavoku-slider/movie/surl_-_forest_(mountain_and_elevator) (360p).mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="portfolio-item" data-video="cg-yzavoku-slider/movie/yuqi_-_motivation (360p).mp4">
+                <video muted loop playsinline>
+                    <source src="cg-yzavoku-slider/movie/yuqi_-_motivation (360p).mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="portfolio-item" data-video="cg-yzavoku-slider/movie/ini_-_wmda_(where_my_drum_at) (360p).mp4">
+                <video muted loop playsinline>
+                    <source src="cg-yzavoku-slider/movie/ini_-_wmda_(where_my_drum_at) (360p).mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <!-- STILL Category -->
+        <div class="portfolio-grid still-grid" id="still-grid">
+            <div class="portfolio-item" data-image="cg-yzavoku-slider/public/slide-10.jpg">
+                <img src="cg-yzavoku-slider/public/slide-10.jpg" alt="Still Image">
+            </div>
+            <div class="portfolio-item" data-image="cg-yzavoku-slider/public/slide-20.jpg">
+                <img src="cg-yzavoku-slider/public/slide-20.jpg" alt="Still Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Fullpage Modal -->
+    <div class="fullpage-modal" id="fullpageModal">
+        <button class="close-btn" id="closeModal">✕</button>
+        <div id="modalContent"></div>
+    </div>
+
+    <script src="work-script.js"></script>
+</body>
+</html>
