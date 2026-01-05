@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
-
 /* Reset */
 * {
     margin: 0;
@@ -14,7 +12,7 @@ html, body {
 }
 
 body {
-    font-family: "DM Mono", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background-color: #f5f5f5;
     color: #000000;
     line-height: 1.5;
@@ -100,7 +98,7 @@ body {
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: "DM Mono", monospace;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     position: relative;
     z-index: 2;
     white-space: nowrap;
@@ -180,7 +178,12 @@ body {
     display: flex;
 }
 
-.fullpage-modal video,
+.fullpage-modal video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .fullpage-modal img {
     max-width: 100%;
     max-height: 100%;
@@ -211,6 +214,112 @@ body {
     transform: rotate(90deg);
 }
 
+/* Modal Overlay */
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10001;
+}
+
+.modal-title-section {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    pointer-events: auto;
+}
+
+.modal-title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.modal-subtitle {
+    font-size: 14px;
+    font-weight: 300;
+    color: #ccc;
+    margin: 8px 0 0 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.modal-toggle-btn {
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    padding: 8px 16px;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: #666;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    pointer-events: auto;
+    text-transform: uppercase;
+}
+
+.modal-toggle-btn:hover {
+    background: rgba(255, 255, 255, 1);
+    color: #000;
+    border-color: #ccc;
+}
+
+.modal-description {
+    position: absolute;
+    top: 140px;
+    left: 40px;
+    right: 40px;
+    max-width: 600px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    pointer-events: auto;
+}
+
+.modal-description.expanded {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.modal-description p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.6;
+    margin: 0 0 12px 0;
+    white-space: pre-line;
+}
+
+.modal-description::-webkit-scrollbar {
+    width: 4px;
+}
+
+.modal-description::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.modal-description::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
+}
+
+.modal-description::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
@@ -238,6 +347,36 @@ body {
     .portfolio-grid {
         grid-template-columns: 1fr;
         gap: 15px;
+    }
+
+    .modal-title-section {
+        top: 20px;
+        left: 20px;
+    }
+
+    .modal-title {
+        font-size: 18px;
+    }
+
+    .modal-subtitle {
+        font-size: 12px;
+    }
+
+    .modal-toggle-btn {
+        top: 80px;
+        left: 20px;
+        padding: 8px 16px;
+        font-size: 11px;
+    }
+
+    .modal-description {
+        top: 120px;
+        left: 20px;
+        right: 20px;
+    }
+
+    .modal-description p {
+        font-size: 12px;
     }
 }
 

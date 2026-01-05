@@ -141,6 +141,28 @@ window.addEventListener('load', function() {
     const modalToggleBtn = document.getElementById('modalToggleBtn');
     const modalDescription = document.getElementById('modalDescription');
 
+    // Vimeo video mapping
+    const vimeoVideos = {
+        1: "1056340719",
+        2: "1122244222",
+        3: "1122262462",
+        4: "1004763418",
+        5: "1125071461",
+        6: "1017875856",
+        7: "1023865004",
+        8: "1140124942",
+        9: "1020560779",
+        11: "1056340719",
+        12: "1122244222",
+        13: "1122262462",
+        14: "1004763418",
+        15: "1125071461",
+        16: "1017875856",
+        17: "1023865004",
+        18: "1140124942",
+        19: "1020560779"
+    };
+
     function openFullpage(imageNumber) {
         modalContent.innerHTML = '';
 
@@ -156,70 +178,19 @@ window.addEventListener('load', function() {
         modalToggleBtn.textContent = 'MORE';
         modalDescription.classList.remove('expanded');
 
-        // Check if this slide has video
-        if (imageNumber === 1 || imageNumber === 11) {
-            const video = document.createElement("video");
-            video.src = "cg-yzavoku-slider/movie/twice_-_strategy_(feat._megan_thee_stallion) (360p).mp4";
-            video.controls = true;
-            video.autoplay = true;
-            video.loop = true;
-            modalContent.appendChild(video);
-        } else if (imageNumber === 2 || imageNumber === 12) {
-            const video = document.createElement("video");
-            video.src = "cg-yzavoku-slider/movie/woodz_-_smashing_concrete (360p).mp4";
-            video.controls = true;
-            video.autoplay = true;
-            video.loop = true;
-            modalContent.appendChild(video);
-        } else if (imageNumber === 3 || imageNumber === 13) {
-            const video = document.createElement("video");
-            video.src = "cg-yzavoku-slider/movie/woodz_-_i'll_never_love_again (360p).mp4";
-            video.controls = true;
-            video.autoplay = true;
-            video.loop = true;
-            modalContent.appendChild(video);
-        } else if (imageNumber === 4 || imageNumber === 14) {
-            const video = document.createElement("video");
-            video.src = "cg-yzavoku-slider/movie/aespa_-_hot_mess (360p).mp4";
-            video.controls = true;
-            video.autoplay = true;
-            video.loop = true;
-            modalContent.appendChild(video);
-        } else if (imageNumber === 5 || imageNumber === 15) {
-            const video = document.createElement("video");
-            video.src = "cg-yzavoku-slider/movie/taeyong_-_501 (360p).mp4";
-            video.controls = true;
-            video.autoplay = true;
-            video.loop = true;
-            modalContent.appendChild(video);
-        } else if (imageNumber === 6 || imageNumber === 16) {
-            const video = document.createElement("video");
-            video.src = "cg-yzavoku-slider/movie/big_naughty_x_kid_milli_-_freestylin (360p).mp4";
-            video.controls = true;
-            video.autoplay = true;
-            video.loop = true;
-            modalContent.appendChild(video);
-        } else if (imageNumber === 7 || imageNumber === 17) {
-            const video = document.createElement("video");
-            video.src = "cg-yzavoku-slider/movie/surl_-_forest_(mountain_and_elevator) (360p).mp4";
-            video.controls = true;
-            video.autoplay = true;
-            video.loop = true;
-            modalContent.appendChild(video);
-        } else if (imageNumber === 8 || imageNumber === 18) {
-            const video = document.createElement("video");
-            video.src = "cg-yzavoku-slider/movie/yuqi_-_motivation (360p).mp4";
-            video.controls = true;
-            video.autoplay = true;
-            video.loop = true;
-            modalContent.appendChild(video);
-        } else if (imageNumber === 9 || imageNumber === 19) {
-            const video = document.createElement("video");
-            video.src = "cg-yzavoku-slider/movie/ini_-_wmda_(where_my_drum_at) (360p).mp4";
-            video.controls = true;
-            video.autoplay = true;
-            video.loop = true;
-            modalContent.appendChild(video);
+        // Check if this slide has Vimeo video
+        if (vimeoVideos[imageNumber]) {
+            const iframe = document.createElement("iframe");
+            iframe.src = `https://player.vimeo.com/video/${vimeoVideos[imageNumber]}?autoplay=1&loop=1&title=0&byline=0&portrait=0`;
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
+            iframe.setAttribute('allowfullscreen', '');
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.position = 'absolute';
+            iframe.style.top = '0';
+            iframe.style.left = '0';
+            modalContent.appendChild(iframe);
         } else {
             const img = document.createElement("img");
             img.src = `cg-yzavoku-slider/public/slide-${imageNumber}.jpg`;
