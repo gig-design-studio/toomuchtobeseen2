@@ -178,7 +178,8 @@ body {
     display: flex;
 }
 
-.fullpage-modal video {
+.fullpage-modal video,
+.fullpage-modal iframe {
     width: 100%;
     height: 100%;
     object-fit: cover;
